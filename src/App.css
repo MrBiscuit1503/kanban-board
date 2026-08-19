@@ -1,0 +1,33 @@
+main {
+  padding: 10px;
+  display: flex;
+  /* align-items: center; */
+  justify-content: center;
+  gap: 2%;
+  /* min-height: 100vh; */
+}
+
+.column {
+  background-color: aqua;
+  padding: 3px;
+  border: 1px solid aqua;
+  border-radius: 10px;
+  min-height: 50vh;
+  min-width: 20%;
+}
+
+.column h1 {
+  font-size: 1.4rem;
+  /* text-align: center; */
+  text-decoration: wavy;
+  font-weight: 600;
+}
+
+.task {
+  background-color: blanchedalmond;
+  border-radius: 8px;
+}
+
+.task p {
+  cursor: grab;
+}

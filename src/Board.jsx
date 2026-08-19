@@ -1,12 +1,11 @@
 import { Column } from "./Column";
 
-export function Board() {
+export function Board({ columns }) {
   return (
-    <>
-      <Column title={"To do"} />
-      <Column title={"In Progress"} />
-      <Column title={"Stalled"} />
-      <Column title={"Complete"} />
-    </>
+    <main>
+      {columns.map((column) => (
+        <Column key={column.id} title={column.title} />
+      ))}
+    </main>
   );
 }
