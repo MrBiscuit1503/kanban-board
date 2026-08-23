@@ -1,13 +1,97 @@
 {
-  "boards": [{ "id": "1", "title": "My Kanban Board" }],
+  "boards": [
+    {
+      "id": "1",
+      "title": "My Kanban Board"
+    }
+  ],
   "columns": [
-    { "id": "1", "boardId": "1", "title": "To Do", "order": 0 },
-    { "id": "2", "boardId": "1", "title": "In Progress", "order": 1 },
-    { "id": "3", "boardId": "1", "title": "Stalled", "order": 1 },
-    { "id": "4", "boardId": "1", "title": "Done", "order": 2 }
+    {
+      "id": "1",
+      "boardId": "1",
+      "title": "To Do",
+      "order": 0
+    },
+    {
+      "id": "2",
+      "boardId": "1",
+      "title": "In Progress",
+      "order": 1
+    },
+    {
+      "id": "4",
+      "boardId": "1",
+      "title": "Done",
+      "order": 2
+    }
   ],
   "tasks": [
-    { "id": "1", "columnId": "1", "title": "Set up project", "order": 0 },
-    { "id": "2", "columnId": "1", "title": "Design schema", "order": 1 }
-  ]
+    {
+      "id": "1",
+      "columnId": "1",
+      "title": "Set up project",
+      "order": 0
+    },
+    {
+      "id": "2",
+      "columnId": "1",
+      "title": "Design schema",
+      "order": 1
+    },
+    {
+      "title": "New Task",
+      "columnId": "1",
+      "order": 0,
+      "id": "Wom6KyhSWnE"
+    },
+    {
+      "title": "New Task",
+      "columnId": "2",
+      "order": 0,
+      "id": "3Jt41Jn1tg4"
+    },
+    {
+      "title": "New Task",
+      "columnId": "2",
+      "order": 1,
+      "id": "fRQCCxSVw3M"
+    },
+    {
+      "title": "New Task",
+      "columnId": "2",
+      "order": 2,
+      "id": "Ckix36ndRHI"
+    },
+    {
+      "title": "New Task",
+      "columnId": "2",
+      "order": 3,
+      "id": "D8j1i6xbXwY"
+    },
+    {
+      "title": "New Task",
+      "columnId": "2",
+      "order": 4,
+      "id": "LBY8HvtCHBs"
+    },
+    {
+      "title": "New Task",
+      "columnId": "2",
+      "order": 5,
+      "id": "JF_8AbWhZr8"
+    },
+    {
+      "title": "New Task",
+      "columnId": "2",
+      "order": 6,
+      "id": "GNBwza02dW0"
+    },
+    {
+      "title": "New Task",
+      "columnId": "2",
+      "order": 7,
+      "id": "6jx9O8Dfw3Q"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
 }
