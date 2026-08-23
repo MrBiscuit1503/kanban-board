@@ -1,24 +1,25 @@
 body {
-  background-color: #f3eee2;
+  background-color: #e3dac4;
 }
 
 main {
   padding: 10px;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   gap: 2%;
-  /* min-height: 100vh; */
 }
 
 .column {
-  background-color: #fbf8f1;
-  padding: 3px;
+  background-color: #f3eee2;
+  padding: 10px;
   border: 1px solid #e3dac4;
   border-radius: 10px;
   min-height: 50vh;
+  max-height: 90vh;
   min-width: 20%;
   max-width: 250px;
+  overflow-y: auto;
 }
 
 .column h1 {
@@ -34,27 +35,100 @@ main {
 }
 
 .column header .addButton {
+  color: #5a5340;
   height: 20px;
   width: 20px;
+  font-size: 1.5rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 1.5rem;
   font-weight: 500;
+  border: 0;
+  background: transparent;
   cursor: pointer;
-}
-
-.column header .addButton:hover {
-  background-color: brown;
+  transition:
+    background 0.15s ease,
+    color 0.15s ease;
   border-radius: 50%;
 }
 
+.column header .addButton:hover {
+  background-color: #e3ead3;
+  color: #3f5230;
+}
+
+.modalOverlay {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(0 0 0 / 45%);
+  z-index: 10;
+}
+
+.taskModal {
+  width: min(90%, 400px);
+  padding: 24px;
+  background-color: #fbf8f1;
+  border: 1px solid #e3dac4;
+  border-radius: 8px;
+}
+
+.taskModal h3 {
+  margin-bottom: 16px;
+}
+
+.taskModal input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #cfc4ad;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.modalActions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.modalActions button {
+  padding: 8px 12px;
+  border: 1px solid #cfc4ad;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
 .task {
+  cursor: grab;
+  margin-top: 5%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fbf8f1;
+  padding: 15px;
   margin-bottom: 2%;
   border: 1px solid #e3dac4;
   border-radius: 8px;
 }
 
+.task .delete {
+  font-size: 1.5em;
+  padding: 5px;
+  cursor: pointer;
+  border-radius: 50px;
+  transition:
+    background 0.15s ease,
+    color 0.15s ease;
+}
+
+.task .delete:hover {
+  background-color: #f4e3dd;
+  color: #a24328;
+}
+
 .task p {
-  cursor: grab;
+  font-size: 0.9rem;
 }

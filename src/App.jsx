@@ -48,12 +48,33 @@ function App() {
     }
   }
 
+  async function deleteTask(taskId) {
+    const response = await fetch(`http://localhost:3001/tasks/${taskId}`, {
+      method: "DELETE",
+    });
+
+    if (!response.ok) {
+      throw new Error("Failed to delete task");
+    }
+
+    setTasks((currentTasks) =>
+      currentTasks.filter((task) => task.id !== taskId),
+    );
+  }
+
   useEffect(() => {
     fetchColumns();
     fetchTasks();
   }, []);
 
-  return <Board columns={columns} tasks={tasks} addTask={addTask} />;
+  return (
+    <Board
+      columns={columns}
+      tasks={tasks}
+      addTask={addTask}
+      deleteTask={deleteTask}
+    />
+  );
 }
 
 export default App;

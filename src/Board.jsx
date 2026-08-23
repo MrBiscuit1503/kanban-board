@@ -1,6 +1,6 @@
 import { Column } from "./Column";
 
-export function Board({ columns, tasks, addTask }) {
+export function Board({ columns, tasks, addTask, deleteTask }) {
   return (
     <main>
       {columns.map((column) => {
@@ -15,6 +15,7 @@ export function Board({ columns, tasks, addTask }) {
             title={column.title}
             tasks={columnTasks}
             addTask={addTask}
+            deleteTask={deleteTask}
           />
         );
       })}

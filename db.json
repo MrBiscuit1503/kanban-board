@@ -47,50 +47,32 @@
     {
       "title": "New Task",
       "columnId": "2",
-      "order": 0,
-      "id": "3Jt41Jn1tg4"
+      "order": 30,
+      "id": "oRqyNbHPBVE"
     },
     {
-      "title": "New Task",
-      "columnId": "2",
-      "order": 1,
-      "id": "fRQCCxSVw3M"
-    },
-    {
-      "title": "New Task",
-      "columnId": "2",
-      "order": 2,
-      "id": "Ckix36ndRHI"
-    },
-    {
-      "title": "New Task",
-      "columnId": "2",
+      "title": "fadsf",
+      "columnId": "1",
       "order": 3,
-      "id": "D8j1i6xbXwY"
+      "id": "D7ZibDBGoBI"
     },
     {
-      "title": "New Task",
-      "columnId": "2",
+      "title": "fsdfsd",
+      "columnId": "1",
       "order": 4,
-      "id": "LBY8HvtCHBs"
+      "id": "YdAEAmfO3yo"
     },
     {
-      "title": "New Task",
-      "columnId": "2",
+      "title": "fadsfsd",
+      "columnId": "1",
       "order": 5,
-      "id": "JF_8AbWhZr8"
+      "id": "ZmDZJDTyIbU"
     },
     {
-      "title": "New Task",
-      "columnId": "2",
+      "title": "fsdasfd",
+      "columnId": "1",
       "order": 6,
-      "id": "GNBwza02dW0"
-    },
-    {
-      "title": "New Task",
-      "columnId": "2",
-      "order": 7,
-      "id": "6jx9O8Dfw3Q"
+      "id": "b4xuQASuJi0"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"
