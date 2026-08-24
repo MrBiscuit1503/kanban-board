@@ -9,6 +9,7 @@ export function Board({
   addColumn,
   updateColumn,
   deleteColumn,
+  moveTask,
 }) {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [columnTitle, setColumnTitle] = useState("");
@@ -45,6 +46,7 @@ export function Board({
               deleteTask={deleteTask}
               updateColumn={updateColumn}
               deleteColumn={deleteColumn}
+              moveTask={moveTask}
             />
           );
         })}

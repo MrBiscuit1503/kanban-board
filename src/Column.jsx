@@ -10,9 +10,27 @@ export function Column({
   deleteTask,
   updateColumn,
   deleteColumn,
+  moveTask,
 }) {
   const [taskTitle, setTaskTitle] = useState("");
   const [isModalOpen, setIsModalOpen] = useState(false);
+
+  function handleDragOver(event) {
+    event.preventDefault();
+    event.dataTransfer.dropEffect = "move";
+  }
+
+  function handleDrop(event) {
+    event.preventDefault();
+
+    const taskId = event.dataTransfer.getData("taskId");
+
+    if (!taskId) {
+      return;
+    }
+
+    moveTask(taskId, columnId, tasks.length);
+  }
 
   async function handleAddTask(event) {
     event.preventDefault();
@@ -54,7 +72,7 @@ export function Column({
   }
 
   return (
-    <div className="column">
+    <div className="column" onDragOver={handleDragOver} onDrop={handleDrop}>
       <header>
         <h4>{title}</h4>
         <div className="columnRight">

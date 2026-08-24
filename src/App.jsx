@@ -131,6 +131,24 @@ function App() {
     );
   }
 
+  async function moveTask(taskId, columnId, order) {
+    const response = await fetch(`http://localhost:3001/tasks/${taskId}`, {
+      method: "PATCH",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ columnId, order }),
+    });
+
+    if (!response.ok) {
+      throw new Error("Failed to move task");
+    }
+
+    const updatedTask = await response.json();
+
+    setTasks((currentTasks) =>
+      currentTasks.map((task) => (task.id === taskId ? updatedTask : task)),
+    );
+  }
+
   useEffect(() => {
     fetchColumns();
     fetchTasks();
@@ -145,6 +163,7 @@ function App() {
       addColumn={addColumn}
       updateColumn={updateColumn}
       deleteColumn={deleteColumn}
+      moveTask={moveTask}
     />
   );
 }
