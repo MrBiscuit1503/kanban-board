@@ -84,6 +84,53 @@ function App() {
     setColumns((currentColumns) => [...currentColumns, createdColumn]);
   }
 
+  async function updateColumn(columnId, title) {
+    const response = await fetch(`http://localhost:3001/columns/${columnId}`, {
+      method: "PATCH",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ title }),
+    });
+
+    if (!response.ok) {
+      throw new Error("Failed to update column");
+    }
+
+    const updatedColumn = await response.json();
+
+    setColumns((currentColumns) =>
+      currentColumns.map((column) =>
+        column.id === columnId ? updatedColumn : column,
+      ),
+    );
+  }
+
+  async function deleteColumn(columnId) {
+    const confirmed = window.confirm(
+      "Are you sure you want to delete this column?",
+    );
+
+    if (!confirmed) {
+      return;
+    }
+
+    const response = await fetch(`http://localhost:3001/columns/${columnId}`, {
+      method: "DELETE",
+    });
+
+    if (!response.ok) {
+      throw new Error("Failed to delete column");
+    }
+
+    setColumns((currentColumns) =>
+      currentColumns.filter((column) => column.id !== columnId),
+    );
+
+    // Remove tasks that belonged to the deleted column locally.
+    setTasks((currentTasks) =>
+      currentTasks.filter((task) => task.columnId !== columnId),
+    );
+  }
+
   useEffect(() => {
     fetchColumns();
     fetchTasks();
@@ -96,6 +143,8 @@ function App() {
       addTask={addTask}
       deleteTask={deleteTask}
       addColumn={addColumn}
+      updateColumn={updateColumn}
+      deleteColumn={deleteColumn}
     />
   );
 }

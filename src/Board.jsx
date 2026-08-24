@@ -1,7 +1,15 @@
 import { useState } from "react";
 import { Column } from "./Column";
 
-export function Board({ columns, tasks, addTask, deleteTask, addColumn }) {
+export function Board({
+  columns,
+  tasks,
+  addTask,
+  deleteTask,
+  addColumn,
+  updateColumn,
+  deleteColumn,
+}) {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [columnTitle, setColumnTitle] = useState("");
 
@@ -35,6 +43,8 @@ export function Board({ columns, tasks, addTask, deleteTask, addColumn }) {
               tasks={columnTasks}
               addTask={addTask}
               deleteTask={deleteTask}
+              updateColumn={updateColumn}
+              deleteColumn={deleteColumn}
             />
           );
         })}

@@ -1,7 +1,16 @@
 import { useState } from "react";
 import { Task } from "./Task";
+import { MdDeleteOutline, MdEdit } from "react-icons/md";
 
-export function Column({ title, addTask, tasks, columnId, deleteTask }) {
+export function Column({
+  title,
+  addTask,
+  tasks,
+  columnId,
+  deleteTask,
+  updateColumn,
+  deleteColumn,
+}) {
   const [taskTitle, setTaskTitle] = useState("");
   const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -29,19 +38,39 @@ export function Column({ title, addTask, tasks, columnId, deleteTask }) {
     setIsModalOpen(false);
   }
 
+  function handleEditColumn() {
+    const newTitle = window.prompt("Enter a new column title", title);
+    const trimmedTitle = newTitle?.trim();
+
+    if (!trimmedTitle || trimmedTitle === title) {
+      return;
+    }
+
+    updateColumn(columnId, trimmedTitle);
+  }
+
+  function handleDeleteColumn() {
+    deleteColumn(columnId);
+  }
+
   return (
     <div className="column">
       <header>
         <h4>{title}</h4>
+        <div className="columnRight">
+          <MdDeleteOutline className="delete" onClick={handleDeleteColumn} />
 
-        <button
-          type="button"
-          className="addButton"
-          onClick={() => setIsModalOpen(true)}
-          aria-label={`Add task to ${title}`}
-        >
-          +
-        </button>
+          <MdEdit className="edit" onClick={handleEditColumn} />
+
+          <button
+            type="button"
+            className="addButton"
+            onClick={() => setIsModalOpen(true)}
+            aria-label={`Add task to ${title}`}
+          >
+            +
+          </button>
+        </div>
       </header>
 
       {tasks.map((task) => (

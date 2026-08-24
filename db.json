@@ -7,12 +7,6 @@
   ],
   "columns": [
     {
-      "id": "1",
-      "boardId": "1",
-      "title": "To Do",
-      "order": 0
-    },
-    {
       "id": "2",
       "boardId": "1",
       "title": "In Progress",
@@ -58,13 +52,13 @@
   "tasks": [
     {
       "title": "flash3",
-      "columnId": "1",
+      "columnId": null,
       "order": 3,
       "id": "bA6olhmVurI"
     },
     {
       "title": "fasdfdsf",
-      "columnId": "1",
+      "columnId": null,
       "order": 3,
       "id": "EeQlk0UnvQs"
     }

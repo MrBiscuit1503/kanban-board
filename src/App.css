@@ -130,7 +130,7 @@ main {
   border-radius: 8px;
 }
 
-.task .delete {
+.delete {
   font-size: 1.6em;
   padding: 5px;
   cursor: pointer;
@@ -140,7 +140,28 @@ main {
     color 0.15s ease;
 }
 
-.task .delete:hover {
+.edit {
+  font-size: 1.6em;
+  padding: 5px;
+  cursor: pointer;
+  border-radius: 50px;
+  transition:
+    background 0.15s ease,
+    color 0.15s ease;
+}
+
+.edit:hover {
+  background-color: #e3ead3;
+  color: #3f5230;
+}
+
+.columnRight {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.delete:hover {
   background-color: #f4e3dd;
   color: #a24328;
 }
