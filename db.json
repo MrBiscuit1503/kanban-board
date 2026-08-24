@@ -23,56 +23,50 @@
       "boardId": "1",
       "title": "Done",
       "order": 2
+    },
+    {
+      "title": "Stalled",
+      "boardId": "1",
+      "order": 3,
+      "id": "5DogcBhKEpA"
+    },
+    {
+      "title": "Fish",
+      "boardId": "1",
+      "order": 4,
+      "id": "HtOoBKklHyk"
+    },
+    {
+      "title": "Biscuit",
+      "boardId": "1",
+      "order": 5,
+      "id": "R_M79ThNXjg"
+    },
+    {
+      "title": "Odeoshi",
+      "boardId": "1",
+      "order": 6,
+      "id": "BRZaj22eDQA"
+    },
+    {
+      "title": "Fatboy and Chumchum",
+      "boardId": "1",
+      "order": 7,
+      "id": "GvDUyBxvN68"
     }
   ],
   "tasks": [
     {
-      "id": "1",
-      "columnId": "1",
-      "title": "Set up project",
-      "order": 0
-    },
-    {
-      "id": "2",
-      "columnId": "1",
-      "title": "Design schema",
-      "order": 1
-    },
-    {
-      "title": "New Task",
-      "columnId": "1",
-      "order": 0,
-      "id": "Wom6KyhSWnE"
-    },
-    {
-      "title": "New Task",
-      "columnId": "2",
-      "order": 30,
-      "id": "oRqyNbHPBVE"
-    },
-    {
-      "title": "fadsf",
+      "title": "flash3",
       "columnId": "1",
       "order": 3,
-      "id": "D7ZibDBGoBI"
+      "id": "bA6olhmVurI"
     },
     {
-      "title": "fsdfsd",
+      "title": "fasdfdsf",
       "columnId": "1",
-      "order": 4,
-      "id": "YdAEAmfO3yo"
-    },
-    {
-      "title": "fadsfsd",
-      "columnId": "1",
-      "order": 5,
-      "id": "ZmDZJDTyIbU"
-    },
-    {
-      "title": "fsdasfd",
-      "columnId": "1",
-      "order": 6,
-      "id": "b4xuQASuJi0"
+      "order": 3,
+      "id": "EeQlk0UnvQs"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"

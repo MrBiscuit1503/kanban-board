@@ -62,6 +62,28 @@ function App() {
     );
   }
 
+  async function addColumn(title) {
+    const newColumn = {
+      title,
+      boardId: "1",
+      order: columns.length,
+    };
+
+    const response = await fetch("http://localhost:3001/columns", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(newColumn),
+    });
+
+    if (!response.ok) {
+      throw new Error("Failed to create column");
+    }
+
+    const createdColumn = await response.json();
+
+    setColumns((currentColumns) => [...currentColumns, createdColumn]);
+  }
+
   useEffect(() => {
     fetchColumns();
     fetchTasks();
@@ -73,6 +95,7 @@ function App() {
       tasks={tasks}
       addTask={addTask}
       deleteTask={deleteTask}
+      addColumn={addColumn}
     />
   );
 }
